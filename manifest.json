@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Mini Sudoku Solver",
+  "version": "1.0",
+  "description": "Löst automatisch das 6x6 Mini-Sudoku auf LinkedIn.",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/games/mini-sudoku/*"],
+      "js": ["solver.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon48.png"],
+      "matches": ["https://www.linkedin.com/*"]
+    }
+  ]
+}
